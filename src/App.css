@@ -1,0 +1,49 @@
+.app { background: #ffffff; color: #111827; min-height: 100vh; transition: background .25s, color .25s; }
+.app.dark { background: #0b1020; color: #e6eef8; }
+
+/* NAVBAR */
+.navbar { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); z-index: 50; }
+.app.dark .navbar { background: rgba(8,12,20,0.6); }
+.logo { font-weight: 700; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 1rem; align-items: center; }
+.nav-links a { padding: .35rem .6rem; border-radius: 6px; font-weight: 500; }
+
+/* THEME BUTTON */
+.theme-btn { border: none; background: transparent; cursor: pointer; font-size: 1.1rem; padding: .25rem; }
+
+/* SECTIONS */
+.section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+.intro { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; padding-top: 3rem; }
+.intro h1 { font-size: 2.25rem; line-height: 1.05; }
+.intro p { font-size: 1.05rem; color: inherit; opacity: .9; max-width: 720px; }
+
+/* ABOUT */
+.about p { max-width: 720px; margin: .75rem 0 0; line-height: 1.6; }
+
+/* SKILLS */
+.skills-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: .75rem; list-style: none; margin-top: .75rem; }
+.skill-chip { padding:.6rem .8rem; border-radius: 8px; background: rgba(0,0,0,0.04); font-weight: 600; text-align: center; }
+.app.dark .skill-chip { background: rgba(255,255,255,0.04); }
+
+/* PROJECTS */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 1rem; margin-top: .75rem; }
+.project { border-radius: 10px; padding: 1rem; background: rgba(0,0,0,0.04); display:flex; flex-direction:column; gap:.5rem; }
+.app.dark .project { background: rgba(255,255,255,0.03); }
+.project h3 { margin-bottom: .25rem; }
+
+/* RESUME BUTTON */
+.btn { display: inline-block; padding: .65rem 1rem; border-radius: 8px; font-weight: 700; background: #0066ff; color: white; }
+
+/* CONTACT */
+.contact-list { display:flex; flex-direction:column; gap:.5rem; margin-top:.5rem; }
+
+/* FOOTER */
+.footer { padding: 1.2rem 2rem; text-align:center; margin-top: 2rem; opacity: .9; }
+
+/* RESPONSIVE NAV for small screens */
+@media (max-width: 768px) {
+  .navbar { padding: .75rem 1rem; }
+  .nav-links { gap: .5rem; }
+  .intro h1 { font-size: 1.75rem; }
+  .section { padding: 2.5rem 1rem; }
+}
